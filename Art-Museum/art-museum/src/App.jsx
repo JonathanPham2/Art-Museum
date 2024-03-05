@@ -1,6 +1,6 @@
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import harvardArt from './data/harvardArt';
-// console.log(harvardArt)
+import GalleryNavigation from './components/GalleryNavigation';
 
 const router =  createBrowserRouter([
   {
@@ -16,7 +16,17 @@ const router =  createBrowserRouter([
     </p>
 </>
 
-  }
+  },
+  {
+    path: "/galleries",
+    element: <GalleryNavigation  galleries= {harvardArt.records}/>
+
+  },
+  // {
+  //   path: "/galleries/:galleryId",
+  //   element: <GalleryNavigation  galleries= {harvardArt.records}/>
+
+  // },
 
 
 ])
